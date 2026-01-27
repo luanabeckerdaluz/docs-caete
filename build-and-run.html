@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-UK" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build and Run &mdash; LabTerra - Modelo CAETÊ</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="canonical" href="https://harmonize-brazil.github.io/build-and-run.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorials" href="tutorials.html" />
+    <link rel="prev" title="Requirements and Setup" href="setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Modelo Caetê
+              <img src="_static/logo1.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="model-structure.html">Code Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input-data.html">Input Data Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Requirements and Setup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Build and Run</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configure-pls-on-fortran-code">Configure PLS on Fortran Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compile-extension-modules-using-makefile">Compile extension modules using Makefile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-caete-toml-for-your-setup">Configure caete.toml for your setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-and-set-required-input-data">Download and set required input data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-model">Run model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Modelo Caetê</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Build and Run</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/LabTerra/LabTerra.github.io/blob//build-and-run.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="setup.html" class="btn btn-neutral float-left" title="Requirements and Setup" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorials.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="build-and-run">
+<h1>Build and Run<a class="headerlink" href="#build-and-run" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p>✅ Configure PLS on Fortran Code</p></li>
+<li><p>✅ Compile extension modules using Makefile</p></li>
+<li><p>✅ Configure caete.toml for your setup</p></li>
+<li><p>✅ Download required input data</p></li>
+<li><p>✅ Run model</p></li>
+</ul>
+<p>A set of algorithms and software packages has been specifically developed for processing drone (Module 1), health (Module 2), and climate (Module 3) data, enabling visualization and analysis in accordance with our technical–scientific concept, the HARMONIZE Instance. This infrastructure has been consolidated into the <em>Cube4Health</em> Python package, which integrates all modules required for data processing and publication through services such as GeoServer, BDC-STAC, and TiTiler. Building on this foundation, we will develop the <em>Cube4Health</em> Application Programming Interface (API) — a server-side extension that provides the same capabilities through a web service.</p>
+<section id="configure-pls-on-fortran-code">
+<h2>Configure PLS on Fortran Code<a class="headerlink" href="#configure-pls-on-fortran-code" title="Permalink to this heading"></a></h2>
+<p>Cube4Health is a Python package developed using version 3.10, which provides a set of scripts for processing and publishing data related to health, climate, and drone imagery, with a specific focus on the Brazilian context. The package follows protocols defined within each module, enabling the integration and analysis of data from various sources, provided they comply with these protocols. It offers an efficient solution for handling such data, facilitating the extraction of essential information for monitoring public health, climate change, and other environmental variables that impact population well-being.</p>
+</section>
+<section id="compile-extension-modules-using-makefile">
+<h2>Compile extension modules using Makefile<a class="headerlink" href="#compile-extension-modules-using-makefile" title="Permalink to this heading"></a></h2>
+<p>Cube4Health is a Python package developed using version 3.10, which provides a set of scripts for processing and publishing data related to health, climate, and drone imagery, with a specific focus on the Brazilian context. The package follows protocols defined within each module, enabling the integration and analysis of data from various sources, provided they comply with these protocols. It offers an efficient solution for handling such data, facilitating the extraction of essential information for monitoring public health, climate change, and other environmental variables that impact population well-being.</p>
+</section>
+<section id="configure-caete-toml-for-your-setup">
+<h2>Configure caete.toml for your setup<a class="headerlink" href="#configure-caete-toml-for-your-setup" title="Permalink to this heading"></a></h2>
+<p>Cube4Health is a Python package developed using version 3.10, which provides a set of scripts for processing and publishing data related to health, climate, and drone imagery, with a specific focus on the Brazilian context. The package follows protocols defined within each module, enabling the integration and analysis of data from various sources, provided they comply with these protocols. It offers an efficient solution for handling such data, facilitating the extraction of essential information for monitoring public health, climate change, and other environmental variables that impact population well-being.</p>
+</section>
+<section id="download-and-set-required-input-data">
+<h2>Download and set required input data<a class="headerlink" href="#download-and-set-required-input-data" title="Permalink to this heading"></a></h2>
+<p>Cube4Health is a Python package developed using version 3.10, which provides a set of scripts for processing and publishing data related to health, climate, and drone imagery, with a specific focus on the Brazilian context. The package follows protocols defined within each module, enabling the integration and analysis of data from various sources, provided they comply with these protocols. It offers an efficient solution for handling such data, facilitating the extraction of essential information for monitoring public health, climate change, and other environmental variables that impact population well-being.</p>
+</section>
+<section id="run-model">
+<h2>Run model<a class="headerlink" href="#run-model" title="Permalink to this heading"></a></h2>
+<p>Cube4Health is a Python package developed using version 3.10, which provides a set of scripts for processing and publishing data related to health, climate, and drone imagery, with a specific focus on the Brazilian context. The package follows protocols defined within each module, enabling the integration and analysis of data from various sources, provided they comply with these protocols. It offers an efficient solution for handling such data, facilitating the extraction of essential information for monitoring public health, climate change, and other environmental variables that impact population well-being.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setup.html" class="btn btn-neutral float-left" title="Requirements and Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorials.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Modelo Caetê.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
