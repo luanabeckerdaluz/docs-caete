@@ -1,23 +1,24 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en-UK" >
+<html class="writer-html5" lang="en-UK" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Requirements and Setup &mdash; LabTerra - Modelo CAETÊ</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=15bababa" />
+
+  
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="canonical" href="https://harmonize-brazil.github.io/setup.html" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c8ee0b5e"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -47,16 +48,24 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="model-structure.html">Code Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model-structure.html">Code Structure (TODO)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="input-data.html">Input Data Overview</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Requirements and Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#install-and-configure-compilers">Install and configure compilers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configure-python-environment">Configure Python environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-and-configure-compilers">Install and configure compilers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linux-macos">Linux/macOS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-python-environment">Configure Python environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Linux/macOS</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#test-f2py">Test f2py</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="build-and-run.html">Build and Run</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">CAETE Tutorials</a></li>
 </ul>
 
         </div>
@@ -87,42 +96,104 @@
            <div itemprop="articleBody">
              
   <section id="requirements-and-setup">
-<h1>Requirements and Setup<a class="headerlink" href="#requirements-and-setup" title="Permalink to this heading"></a></h1>
-<ul class="simple">
-<li><p>✅ Install and configure compilers</p></li>
-<li><p>✅ Configure Python environment</p></li>
-<li><p>✅ Test f2py</p></li>
-</ul>
+<h1>Requirements and Setup<a class="headerlink" href="#requirements-and-setup" title="Link to this heading"></a></h1>
+<p>TERMINAR
+TERMINAR
+TERMINAR
+TERMINAR
+TERMINAR
+TERMINAR
+TERMINAR
+<a class="reference external" href="https://github.com/LabTerra/CAETE/blob/main/doc/system_config.md">https://github.com/LabTerra/CAETE/blob/main/doc/system_config.md</a>
+TERMINAR
+TERMINAR
+TERMINAR
+TERMINAR
+TERMINAR
+TERMINAR
+TERMINAR
+TERMINAR
+TERMINAR</p>
 <section id="install-and-configure-compilers">
-<h2>Install and configure compilers<a class="headerlink" href="#install-and-configure-compilers" title="Permalink to this heading"></a></h2>
-<p>Compiler Requirements:
-- <code class="docutils literal notranslate"><span class="pre">Windows:</span></code> <cite>C Compiler: MSVC (mandatory)</cite> and <cite>Fortran Compiler: Intel OneAPI</cite></p>
-<blockquote>
-<div><ul class="simple">
+<h2>Install and configure compilers<a class="headerlink" href="#install-and-configure-compilers" title="Link to this heading"></a></h2>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
+<ul class="simple">
 <li><dl class="simple">
 <dt>Installation Order:</dt><dd><ul>
-<li><p>First: Install MSVC</p></li>
-<li><p>Second: Install Intel OneAPI</p></li>
+<li><p>First: Install <strong>C Compiler MSVC</strong></p></li>
+<li><p>Second: Install <strong>Fortran Compiler: Intel OneAPI</strong></p></li>
 </ul>
 </dd>
 </dl>
 </li>
+<li><p>The gfortan from WinLibs (GCC 14.2.0 (with MCF threads) + MinGW-w64 12.0.0 (UCRT) - release 1) can also be used in windows along with MSVC.</p></li>
 </ul>
-</div></blockquote>
+</section>
+<section id="linux-macos">
+<h3>Linux/macOS<a class="headerlink" href="#linux-macos" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Linux/macOS:</span></code> <cite>C Compiler: gcc</cite> and <cite>Fortran Compiler: gfortran</cite></p></li>
+<li><dl class="simple">
+<dt>Install:</dt><dd><ul>
+<li><p><strong>C Compiler: gcc</strong></p></li>
+<li><p><strong>Fortran Compiler: gfortran</strong></p></li>
 </ul>
+</dd>
+</dl>
+</li>
+<li><p>Usually they are pre-installed or easily available.</p></li>
+<li><p>The flang AOCC compiler (Fortran language compiler and driver) is supported in linux. You will need to set some variables in the Makefile to use it.</p></li>
+</ul>
+</section>
 </section>
 <section id="configure-python-environment">
-<h2>Configure Python environment<a class="headerlink" href="#configure-python-environment" title="Permalink to this heading"></a></h2>
-<p>Python Requirements:
-- Windows: Python == 3.11
-- Linux/macOS: Python &gt;= 3.11 &lt;= 3.13
-- Required: pip and numpy.f2py</p>
+<h2>Configure Python environment<a class="headerlink" href="#configure-python-environment" title="Link to this heading"></a></h2>
+<p>There are several options to install and manage multiple Python versions in all platforms. For our purposes, we need a python installation that meets the requirements above. Additionally, the Python installation must be reachable from the terminal/shell where you will run the Makefile to build the Fortran/Python extension module. This means that the Python executable must be in the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable or can be launched via an environment manager like <code class="docutils literal notranslate"><span class="pre">pyenv</span></code>, <code class="docutils literal notranslate"><span class="pre">uv</span></code>, <code class="docutils literal notranslate"><span class="pre">PIM</span></code>, etc.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Python installation must be compatible with the C compiler installed in your system. More specifically, the Python installation must be compiled with the same C runtime library as the C compiler used to build the Fortran/Python extension module.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In Windows, this usually means that you should use the <strong>official python installer</strong> from <strong>python.org</strong>, since it is compiled with <strong>MSVC</strong>. Other Python distributions like Anaconda may use different C runtimes and may lead to issues when building the extension module with MSVC.</p>
+</div>
+<p><strong>Best Practices:</strong></p>
+<section id="id1">
+<h3>Windows<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<blockquote>
+<div><div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Avoid system Python! Use isolated Python environments!</strong> System Python is used by core utilities and package managers. Modifying it can break your system.</p>
+</div>
+<ul class="simple">
+<li><p>Consider Python Install Manager (PIM) for multiple versions.</p></li>
+<li><p>Python version must be <strong>Python == 3.11</strong>. Use official Python 3.11 installer!</p></li>
+<li><p>Required <strong>pip</strong> for package installation and <strong>numpy.f2py</strong> for compiling Fortran modules.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id2">
+<h3>Linux/macOS<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<blockquote>
+<div><div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Avoid system Python! Use isolated Python environments!</strong> System Python is used by core utilities and package managers. Modifying it can break your system.</p>
+</div>
+<ul class="simple">
+<li><p>Python version must be <strong>Python &gt;= 3.11 &lt;= 3.13</strong></p></li>
+<li><p>Required <strong>pip</strong> for package installation and <strong>numpy.f2py</strong> for compiling Fortran modules.</p></li>
+<li><p>Use <cite>pyenv</cite> to manage Python packages. Other tools like <code class="docutils literal notranslate"><span class="pre">conda</span></code> or <code class="docutils literal notranslate"><span class="pre">uv</span></code> may work but are not guaranteed.</p></li>
+<li><p>Package Management: Standard <strong>pip</strong></p></li>
+</ul>
+</div></blockquote>
+</section>
 </section>
 <section id="test-f2py">
-<h2>Test f2py<a class="headerlink" href="#test-f2py" title="Permalink to this heading"></a></h2>
-<p>Cube4Health is a Python package developed using version 3.10, which provides a set of scripts for processing and publishing data related to health, climate, and drone imagery, with a specific focus on the Brazilian context. The package follows protocols defined within each module, enabling the integration and analysis of data from various sources, provided they comply with these protocols. It offers an efficient solution for handling such data, facilitating the extraction of essential information for monitoring public health, climate change, and other environmental variables that impact population well-being.</p>
+<h2>Test f2py<a class="headerlink" href="#test-f2py" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Follow <a class="reference external" href="https://numpy.org/doc/stable/f2py/f2py.getting-started.html#">NumPy f2py “quick way”</a>.</p></li>
+<li><p>If successful → CAETE compilation likely to work!</p></li>
+</ul>
 </section>
 </section>
 
