@@ -1,5 +1,12 @@
-Code Structure
-==============
+Code Structure (TODO)
+=====================
+
+**Update: https://github.com/LabTerra/CAETE/blob/main/doc/caete_architecture.md**
+**Update: https://github.com/LabTerra/CAETE/blob/main/doc/caete_architecture.md**
+**Update: https://github.com/LabTerra/CAETE/blob/main/doc/caete_architecture.md**
+**Update: https://github.com/LabTerra/CAETE/blob/main/doc/caete_architecture.md**
+
+
 
 - The code is divided in two main parts:
     - Python interface for data handling and configuration
@@ -11,11 +18,11 @@ Code Structure
 Python source code
 ------------------
 
-- `region.py`: handles the execution over gridcells
-- `caete.py:` Definition of the gridcell (grd_mt class)
-- `metacommunity.py:` metacommunity class, contains multiple communities
-- `community.py:` community class, plant biomass is handled here
-- `other scripts:` utility functions, input handling, preprocessing, jit compiled routines ...
+- ``region.py``: handles the execution over gridcells
+- ``caete.py:`` Definition of the gridcell (grd_mt class)
+- ``metacommunity.py:`` metacommunity class, contains multiple communities
+- ``community.py:`` community class, plant biomass is handled here
+- ``other scripts:`` utility functions, input handling, preprocessing, jit compiled routines ...
 
 
 Fortran source code
@@ -36,6 +43,6 @@ Fortran source code
     - ``budget_fixed.F90:`` Stack allocation (faster, default)
     - ``budget.F90:`` Heap allocation (slower, larger PLS support)
 
-- Makefiles:``
+- Makefiles:
     - ``Makefile:`` For Linux and macOS builds
     - ``Makefile_win:`` For Windows builds (MSVC + OneAPI)

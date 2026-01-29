@@ -27,14 +27,13 @@ jobs:
 
       - name: Construir documentação
         run: |
-          cd docs
-          sphinx-build -b html . _build/html
+          sphinx-build -b html docs/ _build/html
 
       - name: Deploy para gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/_build/html
+          publish_dir: ./_build/html
           keep_files: false  # Limpa a branch gh-pages antes de publicar
-          force_orphan: true  # Mantém apenas o último commit (histórico limpo)
+          force_orphan: false  # Mantém apenas o último commit (histórico limpo)
           
